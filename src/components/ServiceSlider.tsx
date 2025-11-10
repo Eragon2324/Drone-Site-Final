@@ -60,6 +60,8 @@ export default function ServiceSlider() {
                   slidesPerView="auto"
                   centeredSlides={true}
                   loop={true}
+                  loopedSlides={content.services.length}
+                  loopAdditionalSlides={2}
                   spaceBetween={28}
                   speed={700}
                   grabCursor={true}
