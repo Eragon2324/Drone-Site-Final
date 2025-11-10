@@ -35,13 +35,15 @@ export default function ServiceSlider() {
                     .services-home-carousel .swiper-slide { width: 700px !important; }
                     .services-home-carousel .swiper-slide-active { transform: scale(1.22); }
                   }
-                  /* Brand navigation arrows */
+                  /* Brand navigation arrows - increased z-index to ensure clickability */
                   .services-home-carousel .swiper-button-next,
                   .services-home-carousel .swiper-button-prev { 
                     width: 48px; height: 48px; border-radius: 9999px; 
                     border: 1px solid rgba(201,162,75,0.5); 
                     background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); 
-                    color: #c9a24b; 
+                    color: #c9a24b;
+                    z-index: 50 !important;
+                    pointer-events: auto !important;
                   }
                   .services-home-carousel .swiper-button-next:hover,
                   .services-home-carousel .swiper-button-prev:hover { 
@@ -51,6 +53,7 @@ export default function ServiceSlider() {
                   .services-home-carousel .swiper-button-prev:after { font-size: 18px; }
                   .services-home-carousel .swiper-button-prev { left: 8px; }
                   .services-home-carousel .swiper-button-next { right: 8px; }
+                  .services-home-carousel .swiper-button-disabled { opacity: 0.3; cursor: not-allowed; }
                 `}</style>
                 <Swiper
                   modules={[Navigation, Pagination, Keyboard]}
