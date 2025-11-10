@@ -61,11 +61,15 @@ export default async function handler(req, res) {
 
     if (!sendRes.ok) {
       const err = await safeJson(sendRes);
-      return res.status(500).json({ error: err?.message || 'Failed to send email.' });
+      console.error('Resend API error:', err);
+      return res.status(500).json({ error: err?.message || 'Failed to send email.', details: err });
     }
+    const result = await safeJson(sendRes);
+    console.log('Email sent successfully:', result);
     return res.status(200).json({ ok: true });
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error.' });
+    console.error('Unexpected error sending email:', e);
+    return res.status(500).json({ error: 'Unexpected error.', details: e.message });
   }
 }
 
