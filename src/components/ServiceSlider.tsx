@@ -53,7 +53,12 @@ export default function ServiceSlider() {
                   .services-home-carousel .swiper-button-prev:after { font-size: 18px; }
                   .services-home-carousel .swiper-button-prev { left: 8px; }
                   .services-home-carousel .swiper-button-next { right: 8px; }
-                  .services-home-carousel .swiper-button-disabled { opacity: 0.3; cursor: not-allowed; }
+                  /* Force buttons to always be enabled in loop mode */
+                  .services-home-carousel .swiper-button-disabled { 
+                    opacity: 1 !important; 
+                    cursor: pointer !important; 
+                    pointer-events: auto !important;
+                  }
                 `}</style>
                 <Swiper
                   modules={[Navigation, Pagination, Keyboard]}
@@ -62,6 +67,8 @@ export default function ServiceSlider() {
                   loop={true}
                   loopedSlides={content.services.length}
                   loopAdditionalSlides={2}
+                  allowSlidePrev={true}
+                  allowSlideNext={true}
                   spaceBetween={28}
                   speed={700}
                   grabCursor={true}
