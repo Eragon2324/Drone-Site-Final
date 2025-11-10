@@ -51,9 +51,14 @@ export default function PhotoCarousel({ photos }: PhotoCarouselProps) {
           spaceBetween={20}
           slidesPerView={1.2}
           centeredSlides={true}
-          loop={true}
+          loop={photos.length > 3}
+          loopAdditionalSlides={2}
           speed={600}
           grabCursor={true}
+          watchSlidesProgress={true}
+          slideToClickedSlide={true}
+          resistance={true}
+          resistanceRatio={0.85}
           navigation={{
             prevEl: '.photo-carousel-prev',
             nextEl: '.photo-carousel-next',

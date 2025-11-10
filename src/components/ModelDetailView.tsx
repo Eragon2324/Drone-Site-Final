@@ -365,7 +365,7 @@ export default function ModelDetailView({
                 className="relative w-full max-w-[1862px] 2xl:max-w-[2128px] rounded-2xl overflow-hidden bg-black p-1 transition-all duration-200 aspect-video mx-auto"
               >
                 <iframe
-                  src="https://www.youtube-nocookie.com/embed/Bhv0oZyshX0?autoplay=1&mute=1&loop=1&playlist=Bhv0oZyshX0&controls=0&modestbranding=1&rel=0&showinfo=0"
+                  src="https://www.youtube-nocookie.com/embed/Q41DLhG4otE?autoplay=1&mute=1&loop=1&playlist=Q41DLhG4otE&controls=0&modestbranding=1&rel=0&showinfo=0"
                   className="w-full h-full rounded-xl"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
