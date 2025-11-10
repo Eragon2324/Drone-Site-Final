@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #0e0e0e;
+  color: theme('colors.brand.text');
+}
+
+body {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 0%, rgba(215, 183, 100, 0.06), transparent 60%),
+              radial-gradient(ellipse at 50% 100%, rgba(215, 183, 100, 0.04), transparent 50%),
+              #0e0e0e;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(14, 14, 14, 0.4) 50%, transparent 100%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(215, 183, 100, 0.01) 2px, rgba(215, 183, 100, 0.01) 4px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+*:focus-visible {
+  outline: 2px solid theme('colors.brand.gold');
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(215, 183, 100, 0.25);
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-slide {
+  visibility: visible !important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (min-width: 768px) {
+  .no-scroll {
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+  }
+
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

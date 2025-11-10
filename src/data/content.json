@@ -1,0 +1,228 @@
+{
+  "intro": {
+    "headline": "Thomas Weber",
+    "subtext": "Aerial imagery, orthomosaics, and 3D modeling for modern projects.",
+    "image": "/content/Profile Pic.jpg",
+    "imageAlt": "Thomas Weber profile"
+  },
+  "services": [
+    {
+      "id": "aerial",
+      "title": "Aerial Photo / Video",
+      "subtitle": "Turning aerial footage into useful site data.",
+      "description": "Aerial photo and video capture more than visuals — they capture information. Each flight produces imagery that can be processed into orthomosaics, 3D models, point clouds, and volume data, giving teams a measurable, data-backed view of their site.\n\nThis makes drone footage a cost-effective way to combine marketing visuals, inspection insights, and spatial analysis in one workflow.",
+      "media": {
+        "type": "aerial-detail",
+        "photos": [
+          { "src": "/content/Construction JPG.jpg", "caption": "Construction progress" },
+          { "src": "/content/Abbey Leuven JPG.JPG", "caption": "Abbey Leuven" },
+          { "src": "/content/Abbey jpg.JPG", "caption": "Abbey — aerial" },
+          { "src": "/content/Abbey Construction.jpg", "caption": "Abbey Construction" },
+          { "src": "/content/Overview of  jpg.jpg", "caption": "Overview" }
+        ],
+        "videos": [
+          { "type": "youtube", "src": "https://youtu.be/Bhv0oZyshX0", "caption": "Orbit Shots for Progress" },
+          { "type": "youtube", "src": "https://youtu.be/DLM_ESi0cjA", "caption": "360° Site Perspectives" },
+          { "type": "youtube", "src": "https://youtu.be/Ed_ncgfmjTU", "caption": "Inspection Passes" }
+        ],
+        "value": [
+          "Deliver clear context and scale for stakeholders — no scaffolding required.",
+          "Eliminate guesswork: orthographic angles and repeatable flight paths allow for precise comparison over time.",
+          "Capture cinematic material that's ready for both analysis and marketing.",
+          "Reduce time on-site while improving safety and documentation quality."
+        ]
+      },
+      "videoSections": [
+        {
+          "layout": "video-left",
+          "title": "Orbit Shots for Progress and Presentation",
+          "body": "Orbit shots create smooth, circular captures of a site — perfect for marketing reels, visual progress updates, and cross-checks between planned and actual development.\n\nWhile primarily visual, these flights can still generate georeferenced imagery that supports documentation and reporting.",
+          "usps": [
+            "Ideal for combining visual storytelling with traceable site records.",
+            "Helps teams verify changes across phases with clear, consistent imagery."
+          ],
+          "videoRef": 0
+        },
+        {
+          "layout": "video-right",
+          "title": "360° Site Perspectives for Spatial Context",
+          "body": "Full-rotation flights collect data that goes beyond video. The captured imagery can be transformed through photogrammetry into orthomosaics, textured 3D meshes, or point clouds — delivering both visual and analytical value.",
+          "usps": [
+            "Supports measurable outputs such as area, elevation, and volume analysis.",
+            "Useful for creating progress overlays, CAD comparisons, or timeline visualizations.",
+            "A single 360° dataset can feed multiple deliverables — from inspection layers to presentation renders."
+          ],
+          "videoRef": 1
+        },
+        {
+          "layout": "video-left",
+          "title": "Inspection Passes for Remote Analysis",
+          "body": "Low-altitude tracking passes provide detailed coverage for condition assessment, progress validation, and safety monitoring — reducing the need for frequent site visits.\n\nCaptured imagery can be processed into scaled surface maps or local 3D reconstructions for targeted analysis.",
+          "usps": [
+            "Enables teams to review and measure site elements directly from the collected data, anytime and anywhere."
+          ],
+          "videoRef": 2
+        }
+      ]
+    },
+    {
+      "id": "orthos",
+      "title": "Orthomosaics",
+      "subtitle": "The big picture, measured and mapped.",
+      "description": "A single flight can produce hundreds of overlapping photos — stitched into one geo-referenced, true-to-scale orthomosaic map.\n\nThese maps provide centimeter-level accuracy, allowing teams to measure areas, distances, and elevation change directly from the data.\n\nBeyond visuals, orthomosaics form the base layer for 3D modeling, volume calculations, and site documentation that supports planning, reporting, and communication.",
+      "media": {
+        "type": "ortho-detail",
+        "src": "https://ion.cesium.com/stories/viewer/?id=0a018634-c22a-4d55-9448-d358f779cf96"
+      },
+      "embed": {
+        "type": "cesium",
+        "src": "https://ion.cesium.com/stories/viewer/?id=0a018634-c22a-4d55-9448-d358f779cf96",
+        "hint": "Pan / Zoom to explore detail"
+      },
+      "pillars": [
+        {
+          "title": "Accuracy at scale",
+          "body": "High-resolution imagery with centimeter-level precision. Measure, annotate, and compare without needing multiple site visits."
+        },
+        {
+          "title": "Progress you can trust",
+          "body": "Consistent flight paths mean data can be repeated week-to-week or phase-to-phase for reliable, measurable comparisons."
+        },
+        {
+          "title": "Operational clarity",
+          "body": "One shared, map-based reference for managers, engineers, and contractors — everyone looking at the same, accurate data."
+        }
+      ],
+      "process": [
+        {
+          "step": "Flight Capture",
+          "line": "DJI Mini 4 Pro — stable, precise imaging.",
+          "detail": "Consistent settings for uniform textures and reliable mapping."
+        },
+        {
+          "step": "Flight Plan",
+          "line": "Structured grid for full site coverage.",
+          "detail": "Preplanned, repeatable paths ensure complete coverage and comparisons."
+        },
+        {
+          "step": "Overlap & geotags",
+          "line": "70–85% overlap, GPS on every frame.",
+          "detail": "Robust tie points produce sharp, accurate alignment."
+        },
+        {
+          "step": "Processing",
+          "line": "Photogrammetry workflow with filtering, seam blending, and tie-point alignment.",
+          "detail": "Color-balanced, geo-referenced mosaic ready for measurement."
+        },
+        {
+          "step": "Output",
+          "line": "True-to-scale map for analysis and reporting.",
+          "detail": "Shareable, measurable base layer for planning and communication."
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "title": "3D Models",
+      "subtitle": "Explorable detail that connects visuals with data.",
+      "description": "3D models turn aerial footage into accurate, interactive site representations. They’re not just visuals — they’re measurable, shareable, and data-rich.\n\nEach model provides real-world geometry for checking clearances, documenting progress, or comparing designs directly against reality.\n\nTeams can explore sites virtually, extract measurements, and overlay models with CAD or GIS data to align plans with actual conditions.",
+      "media": {
+        "type": "model-detail",
+        "src": "https://sketchfab.com/models/dGUrytaktlEgyangIGPFyMUdIjI/embed?autostart=1&transparent=1&ui_theme=dark&ui_controls=0&ui_infos=0&ui_watermark=0"
+      },
+      "embed": {
+        "type": "sketchfab",
+        "src": "https://sketchfab.com/models/dGUrytaktlEgyangIGPFyMUdIjI/embed?autostart=1&transparent=1&ui_theme=dark&ui_controls=0&ui_infos=0&ui_watermark=0",
+        "hint": "Drag to explore • Scroll to zoom"
+      },
+      "pillars": [
+        { "title": "Visual Context", "body": "Simplifies complex sites by turning real-world structure into navigable, visual models." },
+        { "title": "Measurement & Inspection", "body": "Provides true-to-scale geometry for checking distances, dimensions, and volumes." },
+        { "title": "Presentation-Ready", "body": "Interactive, shareable formats for design reviews, client updates, or public briefings." },
+        { "title": "Design Integration", "body": "Import into CAD or BIM software for visual verification, clash detection, or progress comparison." },
+        { "title": "Change Tracking", "body": "Compare sequential 3D models to see exactly how structures evolve between stages." },
+        { "title": "Planning & Coordination", "body": "Use 3D data to support logistics, layout decisions, and on-site coordination before physical work begins." }
+      ],
+      "useCases": {
+        "heading": "Practical Uses",
+        "subheading": "Where 3D models add real value day-to-day",
+        "cases": [
+          { "title": "Visual Context", "description": "Simplifies complex sites by turning real-world structure into navigable, visual models." },
+          { "title": "Measurement & Inspection", "description": "Provides true-to-scale geometry for checking distances, dimensions, and volumes." },
+          { "title": "Presentation-Ready", "description": "Interactive, shareable formats for design reviews, client updates, or public briefings." },
+          { "title": "Design Integration", "description": "Import into CAD or BIM software for visual verification, clash detection, or progress comparison." },
+          { "title": "Change Tracking", "description": "Compare sequential 3D models to see exactly how structures evolve between stages." }
+        ]
+      },
+      "deliverables": {
+        "heading": "What You Can Receive",
+        "subheading": "Exported in professional formats for inspection, planning, and presentation.",
+        "outputs": [
+          {
+            "type": "3D Model",
+            "format": ".glb, .obj, .fbx, Cesium 3D Tiles",
+            "useCase": "Shareable, measurable 3D model for inspection or presentation"
+          },
+          {
+            "type": "Point Cloud",
+            "format": ".las, .ply",
+            "useCase": "For CAD/BIM integration, volume measurement, or precision analysis"
+          },
+          {
+            "type": "Orthophoto",
+            "format": ".tiff, .jpg",
+            "useCase": "Overhead view for mapping and cross-referencing"
+          },
+          {
+            "type": "Mesh Texture",
+            "format": ".jpg, .png",
+            "useCase": "Realistic surfaces for rendering or visualization"
+          },
+          {
+            "type": "DEM / DSM",
+            "format": ".tiff, .xyz",
+            "useCase": "Elevation and terrain profiling"
+          },
+          {
+            "type": "Measurement Data",
+            "format": ".csv, .json",
+            "useCase": "Numeric outputs for distance, area, and volume calculations"
+          }
+        ]
+      },
+      "process": [
+        {
+          "step": "Capture",
+          "line": "Multiple flight angles and altitudes gather full surface coverage.",
+          "detail": "Each angle adds depth and precision."
+        },
+        {
+          "step": "Coverage",
+          "line": "70–85% overlap ensures clean, accurate geometry.",
+          "detail": "Ensures every surface is mapped and connected."
+        },
+        {
+          "step": "Alignment",
+          "line": "Photogrammetry aligns images into a dense, measurable point cloud.",
+          "detail": "The structure emerges from shared points."
+        },
+        {
+          "step": "Texturing",
+          "line": "Realistic materials provide clarity and visual context.",
+          "detail": "High-fidelity surfaces make the model readable and real."
+        },
+        {
+          "step": "Interactive Model",
+          "line": "Final 3D file ready for web preview, analysis, or integration.",
+          "detail": "Accessible visualization for teams, clients, and reports."
+        }
+      ],
+      "cta": {
+        "message": "Curious what your property or project might look like in 3D?",
+        "submessage": "I'm always happy to share examples or create a small test scan.",
+        "note": "(Reach out below — no pressure.)"
+      },
+      "closing": "A scan you can explore, explain, and measure."
+    }
+  ]
+}
