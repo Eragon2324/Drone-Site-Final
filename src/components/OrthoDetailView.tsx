@@ -365,7 +365,8 @@ export default function OrthoDetailView({
               >
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/Bhv0oZyshX0?autoplay=1&mute=1&loop=1&playlist=Bhv0oZyshX0&controls=0&modestbranding=1&rel=0&showinfo=0"
-                  className="w-full h-full border-0"
+                  style={{ border: 'none', outline: 'none' }}
+                  className="w-full h-full"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   title="Flight to Orthomosaic"
@@ -385,7 +386,8 @@ export default function OrthoDetailView({
               >
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/RKhnELEe870?autoplay=1&mute=1&loop=1&playlist=RKhnELEe870&controls=0&modestbranding=1&rel=0&showinfo=0"
-                  className="w-full h-full border-0"
+                  style={{ border: 'none', outline: 'none' }}
+                  className="w-full h-full"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   title="Orthomosaic Result"
