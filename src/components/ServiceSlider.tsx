@@ -57,18 +57,14 @@ export default function ServiceSlider() {
                 `}</style>
                 <Swiper
                   modules={[Navigation, Pagination, Keyboard]}
-                  slidesPerView={'auto'}
+                  slidesPerView="auto"
                   centeredSlides={true}
                   loop={true}
-                  loopAdditionalSlides={3}
-                  loopedSlides={content.services.length}
-                  watchSlidesProgress={true}
-                  observer={true}
-                  observeParents={true}
                   spaceBetween={28}
                   speed={700}
-                  resistanceRatio={0.85}
-                  reverseDirection={true}
+                  grabCursor={true}
+                  roundLengths={true}
+                  initialSlide={0}
                   keyboard={{ enabled: true, onlyInViewport: true }}
                   navigation={true}
                   pagination={{ clickable: true }}
