@@ -361,11 +361,11 @@ export default function OrthoDetailView({
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 whileHover={{ filter: 'brightness(1.08)' }}
-                className="relative w-full max-w-[1862px] 2xl:max-w-[2128px] rounded-2xl overflow-hidden bg-black p-1 transition-all duration-200 aspect-video mx-auto"
+                className="relative w-full max-w-[1862px] 2xl:max-w-[2128px] rounded-2xl overflow-hidden transition-all duration-200 aspect-video mx-auto"
               >
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/Bhv0oZyshX0?autoplay=1&mute=1&loop=1&playlist=Bhv0oZyshX0&controls=0&modestbranding=1&rel=0&showinfo=0"
-                  className="w-full h-full rounded-xl"
+                  className="w-full h-full rounded-2xl"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   title="Flight to Orthomosaic"
@@ -381,11 +381,11 @@ export default function OrthoDetailView({
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 whileHover={{ filter: 'brightness(1.08)' }}
-                className="relative w-full max-w-[1862px] 2xl:max-w-[2128px] rounded-2xl overflow-hidden bg-black p-1 transition-all duration-200 aspect-video mx-auto"
+                className="relative w-full max-w-[1862px] 2xl:max-w-[2128px] rounded-2xl overflow-hidden transition-all duration-200 aspect-video mx-auto"
               >
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/RKhnELEe870?autoplay=1&mute=1&loop=1&playlist=RKhnELEe870&controls=0&modestbranding=1&rel=0&showinfo=0"
-                  className="w-full h-full rounded-xl"
+                  className="w-full h-full rounded-2xl"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   title="Orthomosaic Result"
