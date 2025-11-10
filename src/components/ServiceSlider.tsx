@@ -6,15 +6,22 @@ import { useCardExpansion } from '../hooks/useCardExpansion';
 import content from '../data/content.json';
 import { HOMEPAGE_CARD_CAROUSEL_V1 } from '../config/flags';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Keyboard } from 'swiper/modules';
+import { Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function ServiceSlider() {
   const { expandedId, open, close } = useCardExpansion();
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
+
+  const handlePrev = () => {
+    swiperRef.current?.slidePrev();
+  };
+
+  const handleNext = () => {
+    swiperRef.current?.slideNext();
+  };
 
   return (
     <section className={`w-full relative z-10 ${expandedId ? 'h-screen' : 'h-[88vh] sm:h-[92vh]'}`}>
@@ -35,47 +42,20 @@ export default function ServiceSlider() {
                     .services-home-carousel .swiper-slide { width: 700px !important; }
                     .services-home-carousel .swiper-slide-active { transform: scale(1.22); }
                   }
-                  /* Brand navigation arrows - increased z-index to ensure clickability */
-                  .services-home-carousel .swiper-button-next,
-                  .services-home-carousel .swiper-button-prev { 
-                    width: 48px; height: 48px; border-radius: 9999px; 
-                    border: 1px solid rgba(201,162,75,0.5); 
-                    background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); 
-                    color: #c9a24b;
-                    z-index: 50 !important;
-                    pointer-events: auto !important;
-                  }
-                  .services-home-carousel .swiper-button-next:hover,
-                  .services-home-carousel .swiper-button-prev:hover { 
-                    border-color: #c9a24b; color: #fff; 
-                  }
-                  .services-home-carousel .swiper-button-next:after,
-                  .services-home-carousel .swiper-button-prev:after { font-size: 18px; }
-                  .services-home-carousel .swiper-button-prev { left: 8px; }
-                  .services-home-carousel .swiper-button-next { right: 8px; }
-                  /* Force buttons to always be enabled in loop mode */
-                  .services-home-carousel .swiper-button-disabled { 
-                    opacity: 1 !important; 
-                    cursor: pointer !important; 
-                    pointer-events: auto !important;
-                  }
                 `}</style>
                 <Swiper
-                  modules={[Navigation, Pagination, Keyboard]}
+                  modules={[Pagination, Keyboard]}
                   slidesPerView="auto"
                   centeredSlides={true}
                   loop={true}
                   loopedSlides={content.services.length}
                   loopAdditionalSlides={2}
-                  allowSlidePrev={true}
-                  allowSlideNext={true}
                   spaceBetween={28}
                   speed={700}
                   grabCursor={true}
                   roundLengths={true}
                   initialSlide={0}
                   keyboard={{ enabled: true, onlyInViewport: true }}
-                  navigation={true}
                   pagination={{ clickable: true }}
                   onSwiper={(s) => (swiperRef.current = s)}
                   onSlideChange={(s) => setActiveIndex(s.realIndex)}
@@ -94,6 +74,35 @@ export default function ServiceSlider() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
+                
+                {/* Custom Navigation Buttons */}
+                <button
+                  onClick={handlePrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full 
+                           border border-brand-gold/40 bg-black/80 backdrop-blur-sm 
+                           text-brand-gold/70 hover:text-brand-gold hover:border-brand-gold 
+                           hover:bg-black hover:scale-110
+                           transition-all duration-300 flex items-center justify-center"
+                  aria-label="Previous slide"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                
+                <button
+                  onClick={handleNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full 
+                           border border-brand-gold/40 bg-black/80 backdrop-blur-sm 
+                           text-brand-gold/70 hover:text-brand-gold hover:border-brand-gold 
+                           hover:bg-black hover:scale-110
+                           transition-all duration-300 flex items-center justify-center"
+                  aria-label="Next slide"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch justify-items-center">
