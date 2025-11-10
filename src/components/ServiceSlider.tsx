@@ -58,16 +58,15 @@ export default function ServiceSlider() {
                 <Swiper
                   modules={[Navigation, Pagination, Keyboard]}
                   slidesPerView={'auto'}
-                  centeredSlides
-                  loop
-                  loopAdditionalSlides={2}
-                  loopedSlides={content.services.length}
-                  centeredSlidesBounds
+                  centeredSlides={true}
+                  loop={true}
+                  loopAdditionalSlides={1}
+                  watchSlidesProgress={true}
                   spaceBetween={28}
                   speed={700}
                   resistanceRatio={0.85}
                   keyboard={{ enabled: true, onlyInViewport: true }}
-                  navigation
+                  navigation={true}
                   pagination={{ clickable: true }}
                   onSwiper={(s) => (swiperRef.current = s)}
                   onSlideChange={(s) => setActiveIndex(s.realIndex)}
