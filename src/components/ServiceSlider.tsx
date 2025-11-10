@@ -68,6 +68,7 @@ export default function ServiceSlider() {
                   spaceBetween={28}
                   speed={700}
                   resistanceRatio={0.85}
+                  reverseDirection={true}
                   keyboard={{ enabled: true, onlyInViewport: true }}
                   navigation={true}
                   pagination={{ clickable: true }}
