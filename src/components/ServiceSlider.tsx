@@ -47,18 +47,15 @@ export default function ServiceSlider() {
                   modules={[Pagination, Keyboard]}
                   slidesPerView="auto"
                   centeredSlides={true}
-                  loop={true}
-                  loopedSlides={content.services.length}
-                  loopAdditionalSlides={2}
+                  loop={false}
                   spaceBetween={28}
                   speed={700}
                   grabCursor={true}
-                  roundLengths={true}
                   initialSlide={0}
                   keyboard={{ enabled: true, onlyInViewport: true }}
                   pagination={{ clickable: true }}
                   onSwiper={(s) => (swiperRef.current = s)}
-                  onSlideChange={(s) => setActiveIndex(s.realIndex)}
+                  onSlideChange={(s) => setActiveIndex(s.activeIndex)}
                   className="services-home-carousel"
                 >
                   {content.services.map((service) => (
